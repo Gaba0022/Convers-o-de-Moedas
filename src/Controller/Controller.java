@@ -34,18 +34,21 @@ public class Controller{
             case "USD - Dólar":
                 dolar = new ConversorDolar();
                 res = dolar.Convert(n2, v1);
+                System.out.printf("" + res);
                 view.getResultado().setText(String.valueOf(res));
+                break;
+                
             case "BRL - Real":
                 real = new ConversorReal();
                 res = real.Convert(n2, v1);
                 view.getResultado().setText(String.valueOf(res));
+                break;
+                
             case "EUR - Euro":
                 euro = new ConversorEuro();
                 res = euro.Convert(n2, v1);
                 view.getResultado().setText(String.valueOf(res));
-            default:
-                res = 0;
-                view.getResultado().setText(String.valueOf(res));
+                break;
         }
     }
 }

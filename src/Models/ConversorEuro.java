@@ -1,23 +1,26 @@
 package Models;
 
 public class ConversorEuro extends ModelGeneric{
+    double t;
     @Override
     public double Convert(String name,double x) {
         try {
             switch(name){
-                case "USD - Dólar":
-                    return x * 1.12;
-                    
                 case "BRL - Real":
-                    return x * 6.28;
-                
+                    t = x * 6.13;
+                    break;
+                case "USD - Dólar":
+                    t = x * 1.13;
+                    break;  
                 default:
-                    return x;
+                    t = x; 
+                    break;
             }
-        } 
+        }
         catch (Exception e) {
             System.err.println(e);
-            return 0;
-        }        
+            t = 0;
+        }
+        return t;
     } 
 }

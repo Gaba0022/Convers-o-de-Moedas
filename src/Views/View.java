@@ -3,6 +3,7 @@ package Views;
 import Controller.Controller;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class View extends javax.swing.JFrame {
@@ -139,8 +140,16 @@ public class View extends javax.swing.JFrame {
     }//GEN-LAST:event_resultadoActionPerformed
 
     private void CoverteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CoverteActionPerformed
-        control.coversor();;
+        control.coversor();
     }//GEN-LAST:event_CoverteActionPerformed
+
+    public Controller getControl() {
+        return control;
+    }
+
+    public void setControl(Controller control) {
+        this.control = control;
+    }
 
     public JButton getCoverte() {
         return Coverte;
@@ -156,6 +165,38 @@ public class View extends javax.swing.JFrame {
 
     public void setEntrada(JComboBox<String> entrada) {
         this.entrada = entrada;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
     }
 
     public JTextField getResultado() {
@@ -181,19 +222,8 @@ public class View extends javax.swing.JFrame {
     public void setValor(JTextField valor) {
         this.valor = valor;
     }
-
-    public Controller getControl() {
-        return control;
-    }
-
-    public void setControl(Controller control) {
-        this.control = control;
-    }
-
     
-    
-    
-    
+        
     private Controller control;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Coverte;
